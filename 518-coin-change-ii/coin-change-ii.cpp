@@ -12,7 +12,7 @@ public:
            return dp[amount][index];
    }
     int change(int amount, vector<int>& coins) {
-       vector<vector<int>>dp(amount+6000,vector<int>(coins.size()+9,-1));
+       vector<vector<int>>dp(amount+2,vector<int>(coins.size()+1,-1));
         return solve(amount,coins,0,dp);
     }
 };
