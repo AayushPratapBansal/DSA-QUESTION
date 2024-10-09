@@ -11,7 +11,7 @@ public:
 
 
     bool isSubsequence(string s, string t) {
-        bool flag=false;
+        
         int k=s.length();
         int l=t.length();
         int  i=0,j=0;
