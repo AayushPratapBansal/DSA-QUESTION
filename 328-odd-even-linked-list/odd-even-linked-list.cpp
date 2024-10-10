@@ -15,12 +15,10 @@ public:
         ListNode*even=new ListNode(-1);  ListNode*head2=even;
         ListNode*temp=head;   int i=1;
       if(head==NULL||head->next==NULL||head->next->next==NULL)   return  head;
+         
            while(temp!=NULL){
-             ListNode*curr;
-
                if(i%2!=0) { odd->next=temp;   odd=odd->next;   }
                else{ even->next=temp;   even=even->next;}
-
                temp=temp->next;
                i++;
            }
