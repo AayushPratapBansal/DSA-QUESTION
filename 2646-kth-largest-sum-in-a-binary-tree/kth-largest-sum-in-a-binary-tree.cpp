@@ -25,19 +25,13 @@ public:
                }
                pq.push(sum);
         }
-   for(int i=0;i<k-1;i++){
-    if(pq.empty())   return -1;
-        pq.pop();  
-   }
-     if(pq.empty()) return -1;
-
-        // while(!pq.empty()&&k>0){
-        //     if(k==1)   return pq.top();
-        //     k--;
-        //     pq.pop();
-        // }
+        while(!pq.empty()&&k>0){
+            if(k==1)   return pq.top();
+            k--;
+            pq.pop();
+        }
 
 
-      return pq.top();
+      return -1;
     }
 };
