@@ -10,7 +10,7 @@ public:
                  if(s[i-1]!=s[i+1])
                     return false;
             }
-            else continue;
+
        }
 
 
