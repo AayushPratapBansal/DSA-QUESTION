@@ -9,7 +9,7 @@ public:
         }
         int ans=-1;
         ans=st.size()/2;
-        ans=ceil(ans/2.0);
-       return ans;
+        return ceil(ans/2.0);
+    //    return ans;
     }
 };
