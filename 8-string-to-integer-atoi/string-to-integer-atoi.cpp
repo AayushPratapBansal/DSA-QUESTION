@@ -21,7 +21,7 @@ public:
     while (i < n && isdigit(s[i])) {
         result = result * 10 + (s[i] - '0');
         
-        // Step 4: Check for overflow and underflow
+        
         if (sign * result > INT_MAX) return INT_MAX;
         if (sign * result < INT_MIN) return INT_MIN;
         
