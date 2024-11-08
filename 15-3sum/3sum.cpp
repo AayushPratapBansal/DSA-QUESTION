@@ -6,7 +6,7 @@ public:
      set<vector<int>>s;
      sort(nums.begin(),nums.end());
     
-       for(int i=0;i<nums.size();i++){
+       for(int i=0;i<nums.size()-2;i++){
          int j=i+1;
          int k=nums.size()-1;
          while(j<k){
