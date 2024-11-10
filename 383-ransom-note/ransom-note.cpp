@@ -1,21 +1,22 @@
 class Solution {
 public:
     bool canConstruct(string ransomNote, string magazine) {
-        unordered_map<char,int>one;
-        unordered_map<char,int>two;
-        
-      for(auto i:ransomNote){
-           one[i]++;
-        }
-       
-      for(auto i:magazine){
-           two[i]++;
-        } 
-       for(auto i:one){
-         if(two.find(i.first)==two.end()||two[i.first]<i.second)
+           int charCount[26] = {0};
+
+    // Count each character in magazine
+    for (char c : magazine) {
+        charCount[c - 'a']++;
+    }
+
+    // Check each character in ransomNote
+    for (char c : ransomNote) {
+        charCount[c - 'a']--;
+        // If count goes below zero, magazine does not have enough of this character
+        if (charCount[c - 'a'] < 0) {
             return false;
-           }
-        
-     return true;
+        }
+    }
+    
+    return true;
     }
 };
