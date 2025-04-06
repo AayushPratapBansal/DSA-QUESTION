@@ -20,7 +20,7 @@ public:
              int maxi=INT_MIN;    int size=q.size();
              for(int i=0;i<size;i++){
                 TreeNode*curr=q.front();   q.pop();
-                  if(curr->val>maxi)   maxi=curr->val;
+                 maxi=max(maxi,curr->val);
                   if(curr->right)   q.push(curr->right);
                   if(curr->left)     q.push(curr->left);
              }
