@@ -9,8 +9,8 @@
 class Solution {
 public:
     bool hasCycle(ListNode *head) {
-        bool flag=false;
-        if(head==NULL||head->next==NULL)  return flag;
+    
+        if(head==NULL||head->next==NULL)  return false;
   
       ListNode*fast=head,*slow=head;
 
@@ -21,6 +21,6 @@ public:
             return true;
           }
       }
-        return flag;
+        return false;
     }
 };
