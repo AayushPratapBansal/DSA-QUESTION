@@ -1,8 +1,8 @@
 class Solution {
 public:
-    int maxProduct(int n) {
+    int maxProduct(int number) {
         int largest=0; int secondlargest=0;
-         int number=n;
+    
           while(number>0){
             int curr;
             curr=number%10;
